@@ -726,7 +726,7 @@ RegisterNetEvent('hud:client:EnhancementEffect', function(data)
         print("PS-Hud error: data invalid from client event call: hud:client:EnhancementEffect")
     end
 end)
-
+--[[
 RegisterCommand('+engine', function()
     local vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
     if vehicle == 0 or GetPedInVehicleSeat(vehicle, -1) ~= PlayerPedId() then return end
@@ -739,7 +739,7 @@ RegisterCommand('+engine', function()
 end)
 
 RegisterKeyMapping('+engine', 'Toggle Engine', 'keyboard', 'G')
-
+]]
 local function IsWhitelistedWeaponArmed(weapon)
     if weapon then
         for _, v in pairs(config.WhitelistedWeaponArmed) do
